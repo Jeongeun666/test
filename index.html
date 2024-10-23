@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tetris</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1400px;
+            height: 90vh;
+            max-height: 900px;
+            background-color: #333;
+        }
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        .column:nth-child(odd) {
+            background-color: #333;
+        }
+        .column:nth-child(even) {
+            background-color: #4d4d4d;
+        }
+        .top, .bottom {
+            color: white;
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .middle {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .middle img, .middle a {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .middle img:hover, .middle a:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                max-height: none;
+            }
+            .column {
+                width: 100%;
+                padding: 10px;
+            }
+            .top, .bottom {
+                font-size: 16px;
+                padding: 10px 0;
+            }
+            .middle {
+                height: 100px;
+            }
+            .middle img, .middle a {
+                max-width: 60%;
+                max-height: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="top">테트리스란?</div>
+            <div class="middle"><a href="index_1.html"><img src="이미지 디자인-01.png" alt="테트리스 소개"></a></div>
+            <div class="bottom">1</div>
+        </div>
+        <div class="column">
+            <div class="top">테트리스 종류</div>
+            <div class="middle"><a href="index_2.html"><img src="이미지 디자인-07.png" alt="테트리스 블록 종류"></a></div>
+            <div class="bottom">2</div>
+        </div>
+        <div class="column">
+            <div class="top">시작하는 방법</div>
+            <div class="middle"><a href="index_3.html"><img src="이미지 디자인-03.png" alt="테트리스 시작 방법"></a></div>
+            <div class="bottom">3</div>
+        </div>
+        <div class="column">
+            <div class="top">Puyo Puyo Tetris</div>
+            <div class="middle"><a href="index_4.html"><img src="이미지 디자인-04.png" alt="Jstris 소개"></a></div>
+            <div class="bottom">4</div>
+        </div>
+        <div class="column">
+            <div class="top">Tetris Effect</div>
+            <div class="middle"><a href="index_5.html"><img src="이미지 디자인-05.png" alt="TETR.IO 소개"></a></div>
+            <div class="bottom">5</div>
+        </div>
+    </div>
+</body>
+</html>
